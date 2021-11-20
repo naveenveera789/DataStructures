@@ -11,7 +11,7 @@ namespace DataStructures
             bool flag = true;
             while(flag)
             {
-                Console.WriteLine("Enter the Program to be executed : \n 1. Create Simple Linked List \n 2. Add in Reverse Order \n 3. Exit");
+                Console.WriteLine("Enter the Program to be executed : \n 1. Create Simple Linked List \n 2. Add in Reverse Order \n 3. Insert at Particular Position \n 4. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -27,11 +27,16 @@ namespace DataStructures
                         linkedList.Display();
                         break;
                     case 3:
+                        linkedList.Add(56);
+                        linkedList.Add(70);
+                        linkedList.InsertAtParticularPosition(1, 30);
+                        linkedList.Display();
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }
-            }
-            
+            }            
         }
     }
 }
