@@ -13,7 +13,7 @@ namespace DataStructures
             bool flag = true;
             while(flag)
             {
-                Console.WriteLine("Enter the Program to be executed : \n 1. Create Simple Linked List \n 2. Add in Reverse Order \n 3. Insert at Particular Position \n 4. Remove First node \n 5. Remove Last Node \n 6. Stack Push \n 7. Stack Peek and Pop \n 8. Enqueue \n 9. Dequeue \n 10. Search \n 11. Exit");
+                Console.WriteLine("Enter the Program to be executed : \n 1. Create Simple Linked List \n 2. Add in Reverse Order \n 3. Insert at Particular Position \n 4. Remove First node \n 5. Remove Last Node \n 6. Stack Push \n 7. Stack Peek and Pop \n 8. Enqueue \n 9. Dequeue \n 10. Search \n 11. Ability to Insert \n 12. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -98,6 +98,16 @@ namespace DataStructures
                         Console.WriteLine("The searched data is at position {0}", search);
                         break;
                     case 11:
+                        linkedList.Add(56);
+                        linkedList.Add(30);
+                        linkedList.Add(70);
+                        linkedList.Display();
+                        int position = linkedList.Search(30);
+                        position++;
+                        linkedList.InsertAtParticularPosition(position, 40);
+                        linkedList.Display();
+                        break;
+                    case 12:
                         flag = false;
                         break;
                 }
